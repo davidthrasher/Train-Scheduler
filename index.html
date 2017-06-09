@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Amtrak Schedule</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+</head>
+
+	<body>
+		<div class= "container">
+
+			<div class= "jumbotron">
+					<div class = "row">
+						<div class = "col-md-12">
+							<img id= "am-logo" src="./assets/images/amtrak.png">
+						</div>
+						<h1 id= "headfont">Train Schedule</h1>
+					</div>
+			</div>
+
+			<div id="current-train-panel" class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-hover" id='current-train-schedule'>
+						<thead>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency (Min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+        <div class="col-lg-12">
+          <div id="add-train-panel" class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Add Train</strong></h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <label for="train-name">Train Name</label>
+                  <input class="form-control" id="train-name" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="destination">Destination</label>
+                  <input class="form-control" id="destination" type="text">
+                </div>
+								<div class="form-group">
+                  <label for="first-train-time">First Train Time (HH:mm Military Time)</label>
+                  <input class="form-control" id="first-train-time" type="number">
+                </div>
+                <div class="form-group">
+                  <label for="frequency">Frequency (Min)</label>
+                  <input class="form-control" id="frequency" type="number">
+                </div>
+                <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+		</div>
+
+		<script src="assets/javascript/app.js"></script>
+	</body>
+</html>

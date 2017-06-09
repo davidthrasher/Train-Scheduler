@@ -1,0 +1,47 @@
+body {
+  background-color: #003a5d;
+}
+.jumbotron {
+  background-color: #003a5d;
+  background-image:url("../../assets/images/amtrak2.jpg");
+  background-size: cover;
+  background-position: center;
+  border: solid 2px #557a91;
+  margin-top: 25px;
+}
+
+#am-logo {
+  width:500px;
+  height:53px;
+}
+
+#headfont {
+  color: white;
+  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+  text-align: center;
+}
+
+#train {
+  width:500px;
+  height:100px;
+  z-index: 0;
+}
+
+#add-train-panel {
+  border: solid 2px #557a91;
+  font-family: 'Noto Serif', serif;
+}
+
+#current-train-panel {
+  border: solid 2px #557a91;
+  font-family: 'Noto Serif', serif;
+}
+
+@media only screen and (max-width: 570px) {
+  #am-logo {
+    width:350px;
+    height:53px;
+  }
+}
