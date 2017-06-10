@@ -44,4 +44,9 @@ body {
     width:350px;
     height:53px;
   }
+  @media only screen and (max-width: 320px) {
+    #am-logo {
+      width:220px;
+      height:33px;
+    }
 }
