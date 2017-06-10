@@ -35,6 +35,7 @@ body {
 }
 
 #current-train-panel {
+  margin-bottom:25px;
   border: solid 2px #557a91;
   font-family: 'Noto Serif', serif;
 }

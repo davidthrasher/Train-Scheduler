@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 
 	<body>
@@ -18,7 +19,7 @@
 
 			<div class= "jumbotron">
 					<div class = "row">
-						<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class = "col-md-12">
 							<img id= "am-logo" src="./assets/images/amtrak.png">
 						</div>
 						<h1 id= "headfont">Train Schedule</h1>
@@ -26,7 +27,7 @@
 			</div>
 
 		<div class = "row">
-			<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class = "col-md-12">
 				<div id="current-train-panel" class="panel panel-default">
 					<div class="panel-heading">
 						<h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
@@ -42,7 +43,7 @@
 										<th>Minutes Away</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody id="itemize">
 								</tbody>
 							</table>
 						</div>
@@ -51,7 +52,7 @@
 	</div>
 
 			<div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-md-12">
           <div id="add-train-panel" class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title"><strong>Add Train</strong></h3>
@@ -59,19 +60,19 @@
             <div class="panel-body">
               <form>
                 <div class="form-group">
-                  <label for="train-name">Train Name</label>
+                  <label for="name-input">Train Name</label>
                   <input class="form-control" id="train-name" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="destination">Destination</label>
+                  <label for="role-input">Destination</label>
                   <input class="form-control" id="destination" type="text">
                 </div>
 								<div class="form-group">
-                  <label for="first-train-time">First Train Time (HH:mm Military Time)</label>
-                  <input class="form-control" id="first-train-time" type="number">
+                  <label for="start-input">First Train Time (Military Time)</label>
+                  <input class="form-control" id="first-train-time" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="frequency">Frequency (Min)</label>
+                  <label for="minute-input">Frequency (Min)</label>
                   <input class="form-control" id="frequency" type="number">
                 </div>
                 <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
